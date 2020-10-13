@@ -27,6 +27,6 @@ easeAlert({
 	desc: 'Bu bir başarı mesajıdır.',
 	type: 'success',
 	closeBtn: true,
-	time: '50000'
+	time: '3500'
 });
 `
