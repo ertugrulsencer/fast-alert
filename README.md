@@ -12,7 +12,7 @@ Kullanışlılık ve dinamiklik açısından javascript ekliyoruz: `<script src=
 
 ## `easeAlert()` Fonksiyonu kullanımı
 
-easeAlert fonksiyonu 5 parametre alır;
+easeAlert fonksiyonu uyarı vermeye yarar, 5 parametre alır;
 
 1. `title` Uyarı kutusunun başlığıdır, uyarı varildiğinde kalın bir şekilde belirtilir.
 2. `desc` Mesajın içeriği, başlıktan sonra bu ksım yazdırılır.
