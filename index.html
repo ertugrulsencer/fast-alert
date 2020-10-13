@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="easealert.min.css">
+    <script src="easealert.js"></script>
+    <title>Ease Alert JS</title>
+</head>
+
+<body>
+    <a href="javascript:void(0);" class="btn" id="btn1">Try it success alert</a>
+    <a href="javascript:void(0);" class="btn" id="btn2">Try it danger alert</a>
+    <a href="javascript:void(0);" class="btn" id="btn3">Try it warning alert</a>
+    <a href="javascript:void(0);" class="btn" id="btn4">Try it info alert</a>
+    <script>
+        /* DNEME */
+        document.querySelector('#btn1').addEventListener('click', () => {
+            easeAlert({
+                title: 'Başarılı',
+                desc: 'Bu bir başarı mesajıdır.',
+                type: 'success',
+                closeBtn: true,
+                time: '50000'
+            });
+        });
+        document.querySelector('#btn2').addEventListener('click', () => {
+            easeAlert({
+                title: 'Hata',
+                desc: 'Bu bir hata mesajıdır.',
+                type: 'danger',
+                closeBtn: true,
+                time: '50000'
+            });
+        });
+        document.querySelector('#btn3').addEventListener('click', () => {
+            easeAlert({
+                title: 'Uyarı',
+                desc: 'Bu bir uyarı mesajıdır.',
+                type: 'warning',
+                closeBtn: true,
+                time: '50000'
+            });
+        });
+        document.querySelector('#btn4').addEventListener('click', () => {
+            easeAlert({
+                title: 'Bilgi',
+                desc: 'Bu bir bilgi selam selam deneme 5 defaya dayanamaaz :) mesajıdır.',
+                type: 'info',
+                closeBtn: true,
+                time: '50000'
+            });
+        });
+    </script>
+</body>
