@@ -1,9 +1,9 @@
-# Ease Alert
+# Fast Alert
 Hafif ve kullanışlı bildirim kutuları ile projeleriniz artık daha interaktif olacak.
 
 ![Ease Alert Ekran Görüntüsü](ease-alert.png)
 
-## Ease Alert Kullanımı
+## Fast Alert Kullanımı
 Animasyon ve göresllik için projemize css dahil ediyoruz: `<link rel="stylesheet" href="easealert.min.css"/>`
 
 Kullanışlılık ve dinamiklik açısından javascript ekliyoruz: `<script src="easealert.js"></script>`
