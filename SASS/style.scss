@@ -1,23 +1,23 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #f8f8f8;
-    display: flex;
-    align-items: center;
-    height: 100vh;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  height: 100vh;
 
-    .btn {
-        text-decoration: none;
-        padding: 0.8rem 1rem;
-        background-color: lighten(rebeccapurple, 20%);
-        color: #f8f8f8;
-        border-radius: 50px;
-        margin: 0 auto;
-    }
+  .btn {
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    background-color: lighten(rebeccapurple, 20%);
+    color: #f8f8f8;
+    border-radius: 50px;
+    margin: 0 auto;
+  }
 }
 
 // Colors
@@ -28,155 +28,157 @@ $info: #4091d7;
 
 // Ease Alert Box
 #easeAlertArea {
-    position: fixed;
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-direction: column;
+  top: 12px;
+  right: 0;
+  width: 320px;
+  height: 100vh;
+  pointer-events: none;
+
+  .ease-alert {
+    border-radius: 4px;
+    right: 12px;
+    position: relative;
+    width: calc(100% - 12px);
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    flex-direction: column;
-    top: 12px;
-    right: 0;
-    width: 320px;
-    height: 100vh;
-    pointer-events: none;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: auto;
+    padding: 0.8rem;
+    padding-left: 3.5rem;
+    margin-bottom: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #333;
+    transition: all 350ms ease-in-out;
 
-    .ease-alert {
-        border-radius: 4px;
-        right: 12px;
-        position: relative;
-        width: calc(100% - 12px);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        pointer-events: auto;
-        padding: 0.8rem;
-        padding-left: 3.5rem;
-        margin-bottom: 12px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        color: #333;
-
-        &-icon {
-            position: absolute;
-            display: grid;
-            place-items: center;
-            left: 6px;
-            top: 50%;
-            transform: translateY(-50%);
-            height: 100%;
-            width: 42px;
-            font-size: 28px;
-        }
-
-        &-times {
-            display: block;
-            text-decoration: none;
-            padding: 0.5rem;
-            color: #444;
-            margin: 0 0.4rem;
-        }
-
-        &.active {
-            animation: easeAlertIn 1s ease;
-            visibility: visible;
-            opacity: 1;
-        }
-
-        &.hide {
-            animation: easeAlertOut 1s cubic-bezier(.6, -0.28, .74, .05);
-            visibility: hidden;
-            opacity: 0;
-        }
-
-        // Alert type: warning
-        &.warning {
-            border-left: 6px solid $warning;
-            background-color: rgba($warning, 0.4);
-
-            .ease-alert-icon {
-                color: $warning;
-            }
-
-            .ease-alert-desc {
-                .title {
-                    color: darken($warning, 1.8);
-                }
-            }
-        }
-
-        // Alert type: success
-        &.success {
-            border-left: 6px solid $success;
-            background-color: rgba($success, 0.4);
-
-            .ease-alert-icon {
-                color: $success;
-            }
-
-            .ease-alert-desc {
-                .title {
-                    color: darken($success, 1.8);
-                }
-            }
-        }
-
-        // Alert type: success
-        &.info {
-            border-left: 6px solid $info;
-            background-color: rgba($info, 0.4);
-
-            .ease-alert-icon {
-                color: $info;
-            }
-
-            .ease-alert-desc {
-                .title {
-                    color: darken($info, 1.8);
-                }
-            }
-        }
-
-        // Alert type: success
-        &.danger {
-            border-left: 6px solid $danger;
-            background-color: rgba($danger, 0.4);
-
-            .ease-alert-icon {
-                color: $danger;
-            }
-
-            .ease-alert-desc {
-                .title {
-                    color: darken($danger, 1.8);
-                }
-            }
-        }
+    &-icon {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      left: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 100%;
+      width: 42px;
+      font-size: 28px;
     }
+
+    &-times {
+      display: block;
+      text-decoration: none;
+      padding: 0.5rem;
+      color: #444;
+      margin: 0 0.4rem;
+    }
+
+    &.active {
+      animation: easeAlertIn 1s ease;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &.hide {
+      animation: easeAlertOut 1s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    // Alert type: warning
+    &.warning {
+      border-left: 6px solid $warning;
+      background-color: rgba($warning, 0.4);
+
+      .ease-alert-icon {
+        color: $warning;
+      }
+
+      .ease-alert-desc {
+        .title {
+          color: darken($warning, 1.8);
+        }
+      }
+    }
+
+    // Alert type: success
+    &.success {
+      border-left: 6px solid $success;
+      background-color: rgba($success, 0.4);
+
+      .ease-alert-icon {
+        color: $success;
+      }
+
+      .ease-alert-desc {
+        .title {
+          color: darken($success, 1.8);
+        }
+      }
+    }
+
+    // Alert type: success
+    &.info {
+      border-left: 6px solid $info;
+      background-color: rgba($info, 0.4);
+
+      .ease-alert-icon {
+        color: $info;
+      }
+
+      .ease-alert-desc {
+        .title {
+          color: darken($info, 1.8);
+        }
+      }
+    }
+
+    // Alert type: success
+    &.danger {
+      border-left: 6px solid $danger;
+      background-color: rgba($danger, 0.4);
+
+      .ease-alert-icon {
+        color: $danger;
+      }
+
+      .ease-alert-desc {
+        .title {
+          color: darken($danger, 1.8);
+        }
+      }
+    }
+  }
 }
 
 // Animations
 @keyframes easeAlertIn {
-    from {
-        transform: translateX(calc(100% + 12px));
-        visibility: hidden;
-        opacity: 0;
-    }
+  from {
+    transform: translateX(calc(100% + 12px));
+    visibility: hidden;
+    opacity: 0;
+  }
 
-    to {
-        transform: translateX(0);
-        visibility: visible;
-        opacity: 1;
-    }
+  to {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 @keyframes easeAlertOut {
-    from {
-        transform: translateX(0);
-        visibility: visible;
-        opacity: 1;
-    }
+  from {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
 
-    to {
-        transform: translateX(calc(100% + 12px));
-        visibility: hidden;
-        opacity: 0;
-    }
+  to {
+    transform: translateX(calc(100% + 12px));
+    visibility: hidden;
+    opacity: 0;
+  }
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fast Alert Demo</title>
+    <link rel="stylesheet" href="./fastalert.min.css" />
+  </head>
+  <body>
+    <h1>Fast Alert Demo</h1>
+    <div class="demo-buttons">
+      <button id="successBtn" type="button">Success Alert</button>
+      <button id="infoBtn" type="button">Info Alert</button>
+      <button id="warningBtn" type="button">Warning Alert</button>
+      <button id="dangerBtn" type="button">Danger Alert</button>
+    </div>
+    <script src="./easealert.js"></script>
+    <script>
+      const buttons = {
+        success: document.querySelector("#successBtn"),
+        info: document.querySelector("#infoBtn"),
+        warning: document.querySelector("#warningBtn"),
+        danger: document.querySelector("#dangerBtn"),
+      };
+      buttons.success.onclick = function () {
+        new FastAlert({
+          type: "success",
+          title: "Deneme",
+          desc: "Lorem ipsum dolar sit amet",
+          time: 3000,
+        });
+      };
+      buttons.info.onclick = function () {
+        new FastAlert({
+          type: "info",
+          title: "Deneme",
+          desc: "Lorem ipsum dolar sit amet",
+          time: 3000,
+        });
+      };
+      buttons.warning.onclick = function () {
+        new FastAlert({
+          type: "warning",
+          title: "Deneme",
+          desc: "Lorem ipsum dolar sit amet",
+          time: 3000,
+        });
+      };
+      buttons.danger.onclick = function () {
+        new FastAlert({
+          type: "danger",
+          title: "Deneme",
+          desc: "Lorem ipsum dolar sit amet",
+          time: 3000,
+        });
+      };
+    </script>
+  </body>
+</html>
