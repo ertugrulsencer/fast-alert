@@ -51,7 +51,9 @@ class FastAlert {
         btn.parentElement.classList.remove("active");
         btn.parentElement.classList.add("hide");
         setTimeout(() => {
-          setTimeout(() => btn.parentElement.remove(), 350);
+          btn.parentElement.style.setProperty("height", "0px");
+          btn.parentElement.style.setProperty("padding", "0px");
+          btn.parentElement.style.setProperty("margin", "0px");
         }, 1000);
       });
     });
@@ -63,6 +65,6 @@ class FastAlert {
         easeAlert.style.setProperty("padding", "0px");
         easeAlert.style.setProperty("margin", "0px");
       }, 1000);
-    }, config.time);
+    }, config.time * 1000);
   }
 }
