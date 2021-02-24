@@ -10,9 +10,9 @@ Kullanışlılık ve dinamiklik açısından javascript ekliyoruz: `<script src=
 
 >Javascript dosyasını `<head></head>` tagları arasına eklemeniz önerilir (Fast Alert döküman yüklendiğinde çalışır).
 
-## `fastAlert()` Fonksiyonu kullanımı
+## `FastAlert` Class'ı kullanımı
 
-fastAlert fonksiyonu uyarı vermeye yarar, 5 parametre alır;
+FastAlert class'ı uyarı vermeye yarar, 5 parametre alır;
 
 1. `title` Uyarı kutusunun başlığıdır, uyarı varildiğinde kalın bir şekilde belirtilir.
 2. `desc` Mesajın içeriği, başlıktan sonra bu ksım yazdırılır.
@@ -22,7 +22,7 @@ fastAlert fonksiyonu uyarı vermeye yarar, 5 parametre alır;
 
 ## Örnek
 `
-fastAlert({
+new FastAlert({
 	title: 'Başarılı',
 	desc: 'Bu bir başarı mesajıdır.',
 	type: 'success',
